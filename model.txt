@@ -1,0 +1,8 @@
+Client:"holds refrences to"#IHandler. The Client initiates a request, at the same time it can establish the chain and determine the order of succession.
+
+INTERFACE:IHandler,DESCRIPTION:Holds refrence to successor,METHODS:HandleRequest()
+	
+CLASS:ConcreteHandeler1: INHERITS:IHandler
+CLASS:COncreateHandeler2: INHERITS:IHandler
+
+
