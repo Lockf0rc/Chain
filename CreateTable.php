@@ -4,6 +4,7 @@
 	"DESCRIPTION":"Create table with database data",
 	"INCLUDE":"UConnect.php"}
 */
+include_once("UConnect.php");
 class CreateTable{
  private $tableMaster;
  private $hookup;
@@ -22,12 +23,12 @@ class CreateTable{
 	(id INT NOT NUll AUTO_INCREMENT, chain VARCHAR(3),responce TEXT, PRIMARY KEY(id))";
 
 	if($this->hookup->query($sql)=== true){
-		printf("")
+		printf("Table $this->tableMaster has been created successfully.<br/>");
 	}
-
-
+	$this->hookup->close();
  }	
 
 }
+$CI=new CreateTable();
 
  ?>
