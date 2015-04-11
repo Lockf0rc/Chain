@@ -12,6 +12,7 @@ $email.="<pre>".print_r($vars,1). "</pre>";
 $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
 error_log($mail,1,"error@scriptreference.com",$headers);
 }
+include_once('IConnect.php');
 Class UConnect implements IConnect
 {
 	private static $server= IConnect::HOST;
@@ -24,7 +25,7 @@ Class UConnect implements IConnect
 	public function doConnect(){
 		self::$hookup=mysqli_connect(self::$server,self::$user,self::$pass,self::$hookup);
 		if(self::$hookup){}elseif(mysql_connect_error(self::$hookup)){
-			echo('here is why it failed ':.mysqli_connect_error());
+			echo('here is why it failed :'.mysqli_connect_error());
 			return self::$hookup;
 			}
 		}
