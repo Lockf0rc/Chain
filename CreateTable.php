@@ -12,7 +12,7 @@ class CreateTable{
  public function __construct()
  {
  $this->tableMaster="helpdesk";#change table
- $this->hookup=UConnect::doConnect;
+ $this->hookup=UConnect::doConnect();
  $drop= "DROP TABLE IF EXIST $this->tableMaster";
 //error_if fails
 	if($this->hookup->query($drop)==true){
