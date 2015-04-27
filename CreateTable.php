@@ -3,6 +3,7 @@
 	"TYPE":"ConcreateClass",
 	"DESCRIPTION":"Create table with database data",
 	"INCLUDE":"UConnect.php"}
+	
 */
 include_once("UConnect.php");
 class CreateTable{
