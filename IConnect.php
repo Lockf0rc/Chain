@@ -8,7 +8,7 @@
 interface IConnect
 {
 const HOST="localhost";
-const UNAME="lockf0rc";
+const UNAME="user";
 const PW="password";
 const DBNAME="DATA";
 public function doConnect();
